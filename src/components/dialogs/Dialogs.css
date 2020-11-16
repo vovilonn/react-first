@@ -1,0 +1,100 @@
+.dialogs_wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dialogs_title {
+  padding: 0;
+  margin: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  color: #47525e;
+  font-family: Lato;
+  font-size: 26px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+.dialogs_list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  overflow: auto;
+  padding-top: 25px;
+  padding-left: 22px;
+}
+
+.dialogs_list_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin-bottom: 31px;
+}
+
+.dialogs_list_item:before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #8190a5;
+  border-radius: 100%;
+  margin-right: 34px;
+}
+
+.dialogs_list_link {
+  color: #8190a5;
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.dialogs_list_link:hover {
+  text-decoration: underline;
+}
+
+.dialogs_dialog {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.dialogs_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dialogs_message_text {
+  padding: 19px;
+  color: #8190a5;
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid #c0ccda;
+  border-radius: 10px;
+}
+
+.dialogs_avatar_block {
+  margin-right: 59px;
+}
+
+.dialogs_name {
+  color: #8190a5;
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.active {
+  font-size: 22px;
+  color: #303030;
+}
+/*# sourceMappingURL=Dialogs.css.map */

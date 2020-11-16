@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebar/SidebarContainer";
+import Profile from "./components/profile/Profile";
+import Dialogs from "./components/dialogs/DialogsContainer";
+import News from "./components/news/News";
+import Music from "./components/music/Music";
+import Settings from "./components/settings/Settings";
+import { Route } from "react-router-dom";
+import "./css/style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = ({ store }) => {
+    return (
+        <div className="container flex-wrapper">
+            <Header />
+            <Sidebar />
+            <Route path="/profile">
+                <Profile />
+            </Route>
+            <Route path="/dialogs">
+                <Dialogs />
+            </Route>
+            <Route path="/news" component={News} />
+            <Route path="/music" component={Music} />
+            <Route path="/settings" component={Settings} />
+        </div>
+    );
+};
 
 export default App;

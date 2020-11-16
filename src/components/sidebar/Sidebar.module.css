@@ -1,0 +1,61 @@
+.aside {
+    background: #13ce66;
+    -ms-flex-preferred-size: 18.84058%;
+    flex-basis: 18.84058%;
+    margin-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 1142px;
+    max-height: 100vh;
+}
+
+.aside-menu {
+    margin-left: 19px;
+    margin-top: 13px;
+}
+
+.aside-menu-link {
+    display: block;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 34px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.aside-menu-item:last-child {
+    margin-top: 40px;
+}
+
+.activeLink {
+    color: gold;
+}
+
+.friends {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 60px;
+}
+
+.friend {
+    cursor: pointer;
+}
+
+.friend_avatar {
+    display: block;
+    border-radius: 50%;
+}
+
+.friend_name {
+    display: block;
+    text-decoration: none;
+    margin-top: 7px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*# sourceMappingURL=Sidebar.css.map */

@@ -1,0 +1,93 @@
+.content-form {
+    max-width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.content-form-title {
+    font-family: Lato;
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 37px;
+}
+
+.content-form-text {
+    margin-left: 16px;
+    border-radius: 3px;
+    outline: none;
+    height: 84px;
+    width: 100%;
+    resize: none;
+    border: none;
+    background-color: #e6eeea;
+    font-family: Lato;
+    font-size: 26px;
+    line-height: 33px;
+    padding: 10px 19px;
+    margin-bottom: 22px;
+}
+
+.content-form-text::-webkit-input-placeholder {
+    color: #b0b8c2;
+}
+
+.content-form-text:-ms-input-placeholder {
+    color: #b0b8c2;
+}
+
+.content-form-text::-ms-input-placeholder {
+    color: #b0b8c2;
+}
+
+.content-form-text::placeholder {
+    color: #b0b8c2;
+}
+
+.content-form-button {
+    outline: none;
+    border: none;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    background-color: #0cb658;
+    width: 162px;
+    height: 36px;
+    font-family: Lato;
+    font-size: 26px;
+    line-height: 33px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-comments {
+    margin-left: 16px;
+    margin-top: 42px;
+}
+
+.content-comments-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 92px;
+}
+
+.content-comments-text {
+    font-family: Lato;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.content-comments-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin-right: 36px;
+    background-image: url("/images/1.jpeg");
+}

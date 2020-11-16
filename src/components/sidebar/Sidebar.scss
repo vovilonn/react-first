@@ -1,0 +1,31 @@
+.aside {
+    background: #13ce66;
+    flex-basis: 18.84058%;
+    margin-right: 20px;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+
+    &-menu {
+        margin-left: 19px;
+        margin-top: 13px;
+
+        &-link {
+            display: block;
+            color: #ffffff;
+            font-family: Lato;
+            font-size: 34px;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        &-item {
+            &:last-child {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+.activeLink {
+    color: gold;
+}

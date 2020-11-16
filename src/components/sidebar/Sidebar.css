@@ -1,0 +1,33 @@
+.aside {
+  background: #13ce66;
+  -ms-flex-preferred-size: 18.84058%;
+      flex-basis: 18.84058%;
+  margin-right: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+}
+
+.aside-menu {
+  margin-left: 19px;
+  margin-top: 13px;
+}
+
+.aside-menu-link {
+  display: block;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 34px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.aside-menu-item:last-child {
+  margin-top: 40px;
+}
+
+.activeLink {
+  color: gold;
+}
+/*# sourceMappingURL=Sidebar.css.map */
