@@ -16,7 +16,6 @@ const App = ({ store }) => {
             <Sidebar />
             <Route path="/profile">
                 <Profile />
-                <div></div>
             </Route>
             <Route path="/dialogs">
                 <Dialogs />
