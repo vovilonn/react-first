@@ -1,17 +1,16 @@
-import React from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import Sidebar from "./Sidebar";
 
 const mapStateToProps = (state) => {
     return {
-        friends: state.sidebar.friends
-    }
-}
+        friends: state.sidebar.friends,
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
-    return{}
-}
+    return {};
+};
 
-const SidebarContainer = connect(mapStateToProps, mapDispatchToProps)(Sidebar)
+const SidebarContainer = connect(mapStateToProps, mapDispatchToProps)(Sidebar);
 
 export default SidebarContainer;
