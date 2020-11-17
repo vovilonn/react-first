@@ -9,7 +9,7 @@ import Settings from "./components/settings/Settings";
 import { Route } from "react-router-dom";
 import "./css/style.css";
 
-const App = ({ store }) => {
+const App = () => {
     return (
         <div className="container flex-wrapper">
             <Header />
