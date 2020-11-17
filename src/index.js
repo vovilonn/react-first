@@ -6,21 +6,14 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-const rerenderEntireTree = (store) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </BrowserRouter>,
-        document.getElementById("root")
-    );
-};
 
-rerenderEntireTree(reduxStore);
-
-reduxStore.subscribe(() => {
-    rerenderEntireTree(reduxStore);
-});
+ReactDOM.render(
+    <BrowserRouter>
+        <Provider store={reduxStore}>
+            <App />
+        </Provider>
+    </BrowserRouter>,
+    document.getElementById("root")
+);
 
 serviceWorker.unregister();

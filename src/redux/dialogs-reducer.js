@@ -19,24 +19,29 @@ const initialState = {
 };
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_DIALOG_MESSAGE:
+        case ADD_DIALOG_MESSAGE: {
+            let stateCopy = { ...state };
+            stateCopy.messageText = { ...state.messageText };
             if (state.newDilogMessageText !== "") {
                 const newMessage = {
                     id: state.messages.length + 1,
                     name: "Vova",
                     message: action.messageText,
                 };
-                state.messages.push(newMessage);
-                state.newDilogMessageText = "";
+                stateCopy.messages.push(newMessage);
+                stateCopy.newDilogMessageText = "";
             }
-            break;
-        case UPDATE_NEW_DIALOGS_MESSAGE_TEXT:
-            state.newDilogMessageText = action.newText;
-            break;
+            return stateCopy;
+        }
+        case UPDATE_NEW_DIALOGS_MESSAGE_TEXT: {
+            let stateCopy = { ...state };
+            stateCopy.newDilogMessageText = { ...state.newDilogMessageText };
+            stateCopy.newDilogMessageText = action.newText;
+            return stateCopy;
+        }
         default:
-            break;
+            return state;
     }
-    return state;
 };
 
 export const updateNewDialogsMessageText = (text) => ({
