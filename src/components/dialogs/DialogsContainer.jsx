@@ -3,34 +3,29 @@ import {
     addDialogMessage,
     updateNewDialogsMessageText,
 } from "../../redux/dialogs-reducer";
-import StoreContext from "../../storeContext";
+import {connect} from "react-redux";
 import Dialogs from "./Dialogs";
-const DialogsContainer = () => {
-    return (
-        <StoreContext>
-            {(store) => {
-                const sendMessageDispatch = (messageText) => {
-                    store.dispatch(addDialogMessage(messageText));
-                    store.dispatch(updateNewDialogsMessageText(""));
-                };
-                const updateNewMessageBody = (text) => {
-                    store.dispatch(updateNewDialogsMessageText(text));
-                };
 
-                return (
-                    <Dialogs
-                        sendMessageDispatch={sendMessageDispatch}
-                        updateNewMessageBody={updateNewMessageBody}
-                        dialogs={store.getState().dialogsPage.dialogs}
-                        messages={store.getState().dialogsPage.messages}
-                        newDilogMessageText={
-                            store.getState().dialogsPage.newDilogMessageText
-                        }
-                    />
-                );
-            }}
-        </StoreContext>
-    );
-};
+const mapStateToProps = (state) => {
+    return { 
+         dialogs: state.dialogsPage.dialogs,
+         messages: state.dialogsPage.messages,
+         newDilogMessageText: state.dialogsPage.newDilogMessageText
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        sendMessageDispatch: (messageText) => {
+             dispatch(addDialogMessage(messageText));
+                    dispatch(updateNewDialogsMessageText(""));
+        },
+        updateNewMessageBody: (text) => {
+            dispatch(updateNewDialogsMessageText(text));
+        }
+    }
+}
+
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default DialogsContainer;
