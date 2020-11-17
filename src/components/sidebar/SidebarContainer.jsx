@@ -1,11 +1,12 @@
 import React from "react";
 import StoreContext from "../../storeContext";
-const Sidebar = () => {
+import Sidebar from "./Sidebar";
+const SidebarContainer = () => {
     return (
         <StoreContext.Consumer>
-            {(store) => <Sidebar friends={store.friend} />}
+            {(store) => <Sidebar friends={store.getState().sidebar.friends} />}
         </StoreContext.Consumer>
     );
 };
 
-export default Sidebar;
+export default SidebarContainer;
