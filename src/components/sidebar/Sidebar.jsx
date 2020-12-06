@@ -16,7 +16,7 @@ const Friend = ({ friend }) => {
 
 const Sidebar = ({ friends }) => {
     const friendsList = friends.map((friend) => {
-        return <Friend friend={friend} />;
+        return <Friend friend={friend} key={friend.name} />;
     });
 
     return (
@@ -38,6 +38,15 @@ const Sidebar = ({ friends }) => {
                         activeClassName={s.activeLink}
                     >
                         Messages
+                    </NavLink>
+                </div>
+                <div className={s["aside-menu-item"]}>
+                    <NavLink
+                        to="/users"
+                        className={s["aside-menu-link"]}
+                        activeClassName={s.activeLink}
+                    >
+                        Users
                     </NavLink>
                 </div>
                 <div className={s["aside-menu-item"]}>

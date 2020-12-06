@@ -37,10 +37,10 @@ const Dialogs = ({
     newDilogMessageText,
 }) => {
     let dialogsElements = dialogs.map((elem) => (
-        <DialogItem name={elem.name} id={elem.id} />
+        <DialogItem name={elem.name} key={elem.id} />
     ));
     let messagesElements = messages.map((elem) => (
-        <Message name={elem.name} message={elem.message} />
+        <Message name={elem.name} message={elem.message} key={elem.message} />
     ));
     const newDialogMessege = React.createRef();
 

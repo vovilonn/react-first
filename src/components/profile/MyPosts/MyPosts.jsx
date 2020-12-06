@@ -2,9 +2,15 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = ({ profilePage, updateNewPostText, addPost, newPostText, posts }) => {
+const MyPosts = ({
+    profilePage,
+    updateNewPostText,
+    addPost,
+    newPostText,
+    posts,
+}) => {
     let postElements = posts.map((data) => (
-        <Post message={data.message} />
+        <Post message={data.message} key={data.id} />
     ));
 
     const newPostElement = React.createRef();
