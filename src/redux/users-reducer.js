@@ -55,6 +55,7 @@ const usersReducer = (state = initialState, action) => {
                             followed: true,
                         };
                     }
+                    return { ...u };
                 }),
             };
         }
@@ -63,12 +64,14 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.map((u) => {
+                    console.log(`${u.id} => ${action.userId}`);
                     if (u.id === action.userId) {
                         return {
                             ...u,
                             followed: false,
                         };
                     }
+                    return { ...u };
                 }),
             };
         }

@@ -17,18 +17,18 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                             {u.followed ? (
                                 <button
                                     onClick={() => {
-                                        follow(u.id);
-                                    }}
-                                >
-                                    Follow
-                                </button>
-                            ) : (
-                                <button
-                                    onClick={() => {
                                         unfollow(u.id);
                                     }}
                                 >
                                     Unfollow
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() => {
+                                        follow(u.id);
+                                    }}
+                                >
+                                    Follow
                                 </button>
                             )}
                         </div>
@@ -39,8 +39,8 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                             <div>{u.status}</div>
                         </span>
                         <span>
-                            <div>{u.location.city}</div>
-                            <div>{u.location.country}</div>
+                            {/* <div>{u.location.city}</div>
+                            <div>{u.location.country}</div> */}
                         </span>
                     </span>
                 </div>
