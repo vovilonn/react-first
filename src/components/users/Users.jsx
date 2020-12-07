@@ -9,7 +9,7 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                         <div>
                             <img
                                 src={u.photoURL}
-                                alt=""
+                                alt="avatar"
                                 className={s.userPhoto}
                             />
                         </div>
@@ -17,18 +17,18 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                             {u.followed ? (
                                 <button
                                     onClick={() => {
-                                        follow(u.id);
+                                        unfollow(u.id);
                                     }}
                                 >
-                                    Follow
+                                    Unollow
                                 </button>
                             ) : (
                                 <button
                                     onClick={() => {
-                                        unfollow(u.id);
+                                        follow(u.id);
                                     }}
                                 >
-                                    Unfollow
+                                    Follow
                                 </button>
                             )}
                         </div>

@@ -11,7 +11,7 @@ const initialState = {
             location: { city: "Odessa", country: "Ukraine" },
             followed: false,
             photoURL:
-                "https://lh3.googleusercontent.com/proxy/gmhYE1jFPwxs4NuVFD8lyujDQdpww7TJ5C5n2i_rlKiA4vZp2E9zN5lie_aKdjcaLVoPVPpr",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ const initialState = {
             location: { city: "Odessa", country: "Ukraine" },
             followed: false,
             photoURL:
-                "https://lh3.googleusercontent.com/proxy/gmhYE1jFPwxs4NuVFD8lyujDQdpww7TJ5C5n2i_rlKiA4vZp2E9zN5lie_aKdjcaLVoPVPpr",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ const initialState = {
             location: { city: "Odessa", country: "Ukraine" },
             followed: true,
             photoURL:
-                "https://lh3.googleusercontent.com/proxy/gmhYE1jFPwxs4NuVFD8lyujDQdpww7TJ5C5n2i_rlKiA4vZp2E9zN5lie_aKdjcaLVoPVPpr",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
         },
         {
             id: 4,
@@ -38,7 +38,7 @@ const initialState = {
             location: { city: "Odessa", country: "Ukraine" },
             followed: false,
             photoURL:
-                "https://lh3.googleusercontent.com/proxy/gmhYE1jFPwxs4NuVFD8lyujDQdpww7TJ5C5n2i_rlKiA4vZp2E9zN5lie_aKdjcaLVoPVPpr",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
         },
     ],
 };
@@ -55,6 +55,7 @@ const usersReducer = (state = initialState, action) => {
                             followed: true,
                         };
                     }
+                    return u;
                 }),
             };
         }
@@ -69,6 +70,7 @@ const usersReducer = (state = initialState, action) => {
                             followed: false,
                         };
                     }
+                    return u;
                 }),
             };
         }
