@@ -3,44 +3,7 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET-USERS";
 
 const initialState = {
-    users: [
-        {
-            id: 1,
-            fullName: "Vova",
-            status: "I'm a boss",
-            location: { city: "Odessa", country: "Ukraine" },
-            followed: false,
-            photoURL:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-        },
-        {
-            id: 2,
-            fullName: "Vova",
-            status: "I'm a boss",
-            location: { city: "Odessa", country: "Ukraine" },
-            followed: false,
-            photoURL:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-        },
-        {
-            id: 3,
-            fullName: "Vova",
-            status: "I'm a boss",
-            location: { city: "Odessa", country: "Ukraine" },
-            followed: true,
-            photoURL:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-        },
-        {
-            id: 4,
-            fullName: "Vova",
-            status: "I'm a boss",
-            location: { city: "Odessa", country: "Ukraine" },
-            followed: false,
-            photoURL:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-        },
-    ],
+    users: [],
 };
 
 const usersReducer = (state = initialState, action) => {
