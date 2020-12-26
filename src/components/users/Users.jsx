@@ -1,45 +1,13 @@
 import React from "react";
 import s from "./users.module.css";
+import * as axios from "axios";
 const Users = ({ users, follow, unfollow, setUsers }) => {
     if (users.length === 0) {
-        setUsers([
-            {
-                id: 1,
-                fullName: "Vova",
-                status: "I'm a boss",
-                location: { city: "Odessa", country: "Ukraine" },
-                followed: false,
-                photoURL:
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-            },
-            {
-                id: 2,
-                fullName: "Vova",
-                status: "I'm a boss",
-                location: { city: "Odessa", country: "Ukraine" },
-                followed: false,
-                photoURL:
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-            },
-            {
-                id: 3,
-                fullName: "Vova",
-                status: "I'm a boss",
-                location: { city: "Odessa", country: "Ukraine" },
-                followed: true,
-                photoURL:
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-            },
-            {
-                id: 4,
-                fullName: "Vova",
-                status: "I'm a boss",
-                location: { city: "Odessa", country: "Ukraine" },
-                followed: false,
-                photoURL:
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaR4M-FaWaJBUxmzjz5PwTFPUEpzAP9qnIGg&usqp=CAU",
-            },
-        ]);
+        axios
+            .get("https://social-network.samuraijs.com/api/1.0/users")
+            .then((res) => {
+                setUsers(res.data);
+            });
     }
 
     return (
