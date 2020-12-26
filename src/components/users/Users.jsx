@@ -6,7 +6,8 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
         axios
             .get("https://social-network.samuraijs.com/api/1.0/users")
             .then((res) => {
-                setUsers(res.data);
+                console.log(res.data.items);
+                setUsers(res.data.items);
             });
     }
 
@@ -16,11 +17,7 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                 <div key={u.id}>
                     <span>
                         <div>
-                            <img
-                                src={u.photoURL}
-                                alt="avatar"
-                                className={s.userPhoto}
-                            />
+                            <img src="" alt="avatar" className={s.userPhoto} />
                         </div>
                         <div>
                             {u.followed ? (
@@ -44,12 +41,8 @@ const Users = ({ users, follow, unfollow, setUsers }) => {
                     </span>
                     <span>
                         <span>
-                            <div>{u.fullName}</div>
+                            <div>{u.name}</div>
                             <div>{u.status}</div>
-                        </span>
-                        <span>
-                            <div>{u.location.city}</div>
-                            <div>{u.location.country}</div>
                         </span>
                     </span>
                 </div>
